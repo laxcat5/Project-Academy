@@ -1,4 +1,0 @@
-[submodule "libs/LIUtils"]
-	path = libs/LIUtils
-	url = git://github.com/laxcat5/LIUtils.git
-	branch = LaxCat
