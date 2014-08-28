@@ -11,11 +11,8 @@
 package cn.misaka.ability.category.electromaster;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import cn.liutils.api.util.GenericUtils;
-import cn.liutils.api.util.Motion3D;
 import cn.misaka.ability.api.APDataMain;
 import cn.misaka.ability.api.ability.AbilitySkill;
 import cn.misaka.ability.api.control.PlayerControlStat;
@@ -25,7 +22,6 @@ import cn.misaka.ability.category.electromaster.client.SkillRenderArc;
 import cn.misaka.core.proxy.APClientProps;
 import cn.misaka.support.entity.EntityArc;
 import cn.misaka.support.entity.fx.EntityElecArcFX;
-import cn.misaka.support.entity.fx.EntitySurroundArcFX;
 
 /**
  * @author WeAthFolD

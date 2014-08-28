@@ -13,6 +13,9 @@ package cn.misaka.ability.system.command;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayer;
 import cn.liutils.api.command.LICommandBase;
 import cn.misaka.ability.api.APControlMain;
 import cn.misaka.ability.api.APDataMain;
@@ -21,9 +24,6 @@ import cn.misaka.ability.api.control.preset.ControlPreset;
 import cn.misaka.ability.api.control.preset.IPresetModifier;
 import cn.misaka.ability.api.control.preset.PresetAutoArrange;
 import cn.misaka.ability.api.data.PlayerData;
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
 
 /**
  * @author WeAthFolD

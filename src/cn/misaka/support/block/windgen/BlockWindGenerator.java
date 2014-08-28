@@ -12,16 +12,15 @@ package cn.misaka.support.block.windgen;
 
 import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import cn.liutils.api.block.BlockDirectionedMulti;
-import cn.misaka.core.AcademyCraft;
-import cn.misaka.support.block.tile.TileWindGenerator;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
+import cn.liutils.api.block.BlockDirectionedMulti;
+import cn.misaka.core.AcademyCraft;
+import cn.misaka.support.block.tile.TileWindGenerator;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 /**
@@ -34,7 +33,7 @@ public class BlockWindGenerator extends BlockDirectionedMulti {
 		super(Material.rock);
 		setBlockName("windgen");
 		setBlockTextureName("academy:windgen");
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 	}
 
 	@Override

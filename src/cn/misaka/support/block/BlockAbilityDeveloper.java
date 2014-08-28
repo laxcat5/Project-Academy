@@ -10,16 +10,7 @@
  */
 package cn.misaka.support.block;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import cn.liutils.api.block.LIContainerBase;
-import cn.liutils.core.proxy.LIClientProps;
-import cn.misaka.core.AcademyCraft;
-import cn.misaka.core.proxy.APClientProps;
-import cn.misaka.support.block.tile.TileAbilityDeveloper;
-import cn.misaka.support.item.ItemModuleAttached;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
@@ -31,6 +22,14 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import cn.liutils.api.block.LIContainerBase;
+import cn.liutils.core.proxy.LIClientProps;
+import cn.misaka.core.AcademyCraft;
+import cn.misaka.core.proxy.APClientProps;
+import cn.misaka.support.block.tile.TileAbilityDeveloper;
+import cn.misaka.support.item.ItemModuleAttached;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * META: 第1位：0HEAD 1TAIL 第2、3位：byte(2) facingDirection 值和ForgeDirection有一个映射
@@ -46,7 +45,7 @@ public class BlockAbilityDeveloper extends LIContainerBase {
 	public BlockAbilityDeveloper() {
 		super(Material.iron);
 		setHardness(2.0F);
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		setBlockName("ability_developer");
 		setBlockTextureName("academy:bed");
 	}

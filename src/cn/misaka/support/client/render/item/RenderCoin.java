@@ -10,14 +10,15 @@
  */
 package cn.misaka.support.client.render.item;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.client.IItemRenderer;
+
 import org.lwjgl.opengl.GL11;
 
 import cn.liutils.api.client.util.RenderUtils;
 import cn.liutils.api.util.GenericUtils;
 import cn.misaka.core.proxy.APClientProps;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.client.IItemRenderer;
 
 /**
  * @author WeAthFolD

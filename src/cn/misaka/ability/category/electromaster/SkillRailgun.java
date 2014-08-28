@@ -11,12 +11,8 @@
 package cn.misaka.ability.category.electromaster;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -31,18 +27,18 @@ import cn.liutils.api.util.PlayerTicker;
 import cn.misaka.ability.api.APControlMain;
 import cn.misaka.ability.api.APDataMain;
 import cn.misaka.ability.api.ability.AbilitySkill;
-import cn.misaka.ability.api.client.render.SkillRender;
 import cn.misaka.ability.api.control.PlayerControlStat;
 import cn.misaka.ability.api.control.SkillControlStat;
 import cn.misaka.ability.api.control.preset.ControlPreset.SkillKey;
 import cn.misaka.ability.api.data.PlayerData;
 import cn.misaka.ability.category.electromaster.client.SkillRenderArc;
-import cn.misaka.ability.category.electromaster.client.SkillRenderRailgun;
 import cn.misaka.core.proxy.APClientProps;
 import cn.misaka.core.register.APItems;
 import cn.misaka.support.entity.EntityRailgun;
 import cn.misaka.support.entity.fx.EntityRailgunFX;
 import cn.misaka.support.entity.fx.EntityRayAttenuate.AttenuateType;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * 哔哩哔哩！

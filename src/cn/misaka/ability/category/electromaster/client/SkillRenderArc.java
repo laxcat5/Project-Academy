@@ -12,16 +12,15 @@ package cn.misaka.ability.category.electromaster.client;
 
 import java.util.Random;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.Vec3;
+
+import org.lwjgl.opengl.GL11;
+
 import cn.liutils.api.client.render.Vertex;
 import cn.liutils.api.client.util.RenderUtils;
 import cn.misaka.ability.api.client.render.SkillRender;
-import cn.misaka.ability.api.client.render.SkillRender.SkillRenderType;
 import cn.misaka.ability.api.control.SkillControlStat;
 import cn.misaka.ability.api.data.PlayerData;
 import cn.misaka.core.proxy.APClientProps;

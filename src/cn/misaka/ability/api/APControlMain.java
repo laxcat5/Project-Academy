@@ -172,7 +172,7 @@ public class APControlMain {
 			SkillKey entry = cipher(keyid); //解读为skill局部操作
 			if(entry != null) {
 				onSkillKeyChanged(player, entry.first, entry.second, down); 
-				AcademyCraft.netHandler.sendToServer(new MsgControl(entry.first, entry.second, down));
+				AcademyCraft.getNetHandler().sendToServer(new MsgControl(entry.first, entry.second, down));
 			}
 		}
 	}

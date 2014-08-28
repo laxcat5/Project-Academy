@@ -10,6 +10,11 @@
  */
 package cn.misaka.ability.system.client.render;
 
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.IItemRenderer;
+
 import org.lwjgl.opengl.GL11;
 
 import cn.liutils.api.client.util.RenderUtils;
@@ -21,10 +26,6 @@ import cn.misaka.ability.api.client.render.SkillRender.SkillRenderType;
 import cn.misaka.ability.api.control.PlayerControlStat;
 import cn.misaka.ability.api.control.SkillControlStat;
 import cn.misaka.ability.api.data.PlayerData;
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.IItemRenderer;
 
 /**
  * @author WeAthFolD

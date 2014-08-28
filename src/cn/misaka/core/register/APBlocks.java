@@ -10,17 +10,18 @@
  */
 package cn.misaka.core.register;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cn.misaka.support.block.*;
-import cn.misaka.support.block.tile.*;
-import cn.misaka.support.block.windgen.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
-import cn.misaka.core.register.APItems;
+import cn.misaka.support.block.APBlockOre;
+import cn.misaka.support.block.BlockAbilityDeveloper;
+import cn.misaka.support.block.BlockFieldIncrease;
+import cn.misaka.support.block.tile.TileAbilityDeveloper;
+import cn.misaka.support.block.tile.TileFieldIncrease;
+import cn.misaka.support.block.tile.TileWindGenerator;
+import cn.misaka.support.block.windgen.BlockWindGenerator;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 /**

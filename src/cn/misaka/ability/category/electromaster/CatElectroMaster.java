@@ -49,7 +49,7 @@ public class CatElectroMaster extends AbilityCategory {
 		};
 	}
 
-	private Pair<ResourceLocation, ResourceLocation> override = new Pair(null, APClientProps.TEX_GUI_RAILGUN_DEC);
+	private Pair<ResourceLocation, ResourceLocation> override = new Pair<ResourceLocation, ResourceLocation>(null, APClientProps.TEX_GUI_RAILGUN_DEC);
 	@Override
 	public Pair<ResourceLocation, ResourceLocation> getHudTextureOverride() {
 		return override;

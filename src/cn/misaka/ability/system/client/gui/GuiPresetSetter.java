@@ -1,9 +1,6 @@
 package cn.misaka.ability.system.client.gui;
 
-import org.lwjgl.opengl.GL11;
-import cn.liutils.api.client.gui.*;
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiScreen;
+import cn.liutils.api.client.gui.LIGuiScreen;
 
 /**
  * @author jiangyue

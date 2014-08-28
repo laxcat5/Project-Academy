@@ -10,10 +10,10 @@
  */
 package cn.misaka.support.entity.fx;
 
-import cn.misaka.core.proxy.APClientProps;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import cn.misaka.core.proxy.APClientProps;
 
 /**
  * @author WeAthFolD

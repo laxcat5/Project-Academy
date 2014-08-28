@@ -10,11 +10,21 @@
  */
 package cn.misaka.support.block.tile;
 
+import ic2.api.energy.event.EnergyTileLoadEvent;
+import ic2.api.energy.event.EnergyTileUnloadEvent;
+import ic2.api.energy.tile.IEnergySink;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Vec3;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.ForgeDirection;
 import cn.liutils.api.util.EntityUtils;
 import cn.liutils.api.util.GenericUtils;
 import cn.misaka.core.AcademyCraft;
@@ -24,17 +34,6 @@ import cn.misaka.support.block.IADModuleAttached;
 import cn.misaka.support.module.ModuleCard;
 import cn.misaka.support.network.message.MsgDeveloperAttachment;
 import cn.misaka.support.network.message.MsgDeveloperPlayer;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.util.ForgeDirection;
-
-
-import ic2.api.energy.event.EnergyTileLoadEvent;
-import ic2.api.energy.event.EnergyTileUnloadEvent;
-import ic2.api.energy.tile.IEnergySink;
 
 /**
  * 能力开发机TileEntity。仍然在制作中。
@@ -70,7 +69,7 @@ public class TileAbilityDeveloper extends TileEntity implements IEnergySink{
 		for(int i = 0; i < 4; i++) {
 			if(sidedModules[i] == -1) {
 				sidedModules[i] = a;
-				AcademyCraft.netHandler.sendToDimension(new MsgDeveloperAttachment(this, 0x01), worldObj.provider.dimensionId);
+				AcademyCraft.getNetHandler().sendToDimension(new MsgDeveloperAttachment(this, 0x01), worldObj.provider.dimensionId);
 				return true;
 			}
 		}
@@ -91,7 +90,7 @@ public class TileAbilityDeveloper extends TileEntity implements IEnergySink{
 		
 		if(++ticksAfterUpdate > 40) {
 			ticksAfterUpdate = 0;
-			AcademyCraft.netHandler.sendToDimension(new MsgDeveloperAttachment(this, 0x03), worldObj.provider.dimensionId);
+			AcademyCraft.getNetHandler().sendToDimension(new MsgDeveloperAttachment(this, 0x03), worldObj.provider.dimensionId);
 		}
 		
 		if(!worldObj.isRemote){
@@ -122,7 +121,7 @@ public class TileAbilityDeveloper extends TileEntity implements IEnergySink{
 			player.getEntityData().setBoolean("ac_ondev", true);
 			player.getEntityData().setByte("ac_devdir", (byte) (getBlockMetadata() >> 1));
 			if(!player.worldObj.isRemote)
-				AcademyCraft.netHandler.sendToDimension(new MsgDeveloperPlayer(player, true, getBlockMetadata() >> 1), worldObj.provider.dimensionId);
+				AcademyCraft.getNetHandler().sendToDimension(new MsgDeveloperPlayer(player, true, getBlockMetadata() >> 1), worldObj.provider.dimensionId);
 			return true;
 		}
 		return false;
@@ -136,7 +135,7 @@ public class TileAbilityDeveloper extends TileEntity implements IEnergySink{
 			EntityUtils.applyEntityToPos(mountPlayer, vec3);
 			//mountPlayer.onGround = true;
 			if(!mountPlayer.worldObj.isRemote)
-				AcademyCraft.netHandler.sendToDimension(new MsgDeveloperPlayer(mountPlayer, false, getBlockMetadata() >> 1), worldObj.provider.dimensionId);
+				AcademyCraft.getNetHandler().sendToDimension(new MsgDeveloperPlayer(mountPlayer, false, getBlockMetadata() >> 1), worldObj.provider.dimensionId);
 			mountPlayer = null;
 		}
 	}

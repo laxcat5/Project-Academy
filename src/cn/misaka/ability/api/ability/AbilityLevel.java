@@ -1,8 +1,8 @@
 package cn.misaka.ability.api.ability;
 
-import cn.misaka.ability.api.control.PlayerControlStat;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import cn.misaka.ability.api.control.PlayerControlStat;
 
 /**
  * 能力等级。主要提供当前技能的可学习信息。

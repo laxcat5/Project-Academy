@@ -10,8 +10,6 @@
  */
 package cn.misaka.support.entity.fx;
 
-import cn.liutils.api.util.Motion3D;
-import cn.misaka.core.proxy.APClientProps;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -19,6 +17,8 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import cn.liutils.api.util.Motion3D;
+import cn.misaka.core.proxy.APClientProps;
 
 /**
  * 条状+动画类特效的通用实体

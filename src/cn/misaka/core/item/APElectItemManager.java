@@ -3,11 +3,11 @@
  */
 package cn.misaka.core.item;
 
-import cn.liutils.api.util.GenericUtils;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import ic2.api.item.IElectricItemManager;
 import ic2.api.item.ISpecialElectricItem;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import cn.liutils.api.util.GenericUtils;
 
 /**
  * @author WeAthFolD

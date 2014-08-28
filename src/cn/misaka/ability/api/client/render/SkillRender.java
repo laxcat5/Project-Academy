@@ -10,9 +10,9 @@
  */
 package cn.misaka.ability.api.client.render;
 
+import net.minecraft.entity.player.EntityPlayer;
 import cn.misaka.ability.api.control.SkillControlStat;
 import cn.misaka.ability.api.data.PlayerData;
-import net.minecraft.entity.player.EntityPlayer;
 
 /**
  * 技能渲染。不需管手什么的，只渲染该技能的特效即可。

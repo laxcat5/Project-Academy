@@ -10,8 +10,8 @@
  */
 package cn.misaka.support.item;
 
-import cn.misaka.core.AcademyCraft;
 import net.minecraft.item.Item;
+import cn.misaka.core.AcademyCraft;
 
 /**
  * @author KSkun
@@ -21,7 +21,7 @@ public class ItemNeedle extends Item {
 
 	public ItemNeedle() {
 		setUnlocalizedName("ap_needle");
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		setTextureName("academy:needle");
 	}
 	

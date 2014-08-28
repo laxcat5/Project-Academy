@@ -10,9 +10,9 @@
  */
 package cn.misaka.core.misc;
 
-import cn.misaka.core.register.APItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import cn.misaka.core.register.APItems;
 
 /**
  * @author WeAthFolD

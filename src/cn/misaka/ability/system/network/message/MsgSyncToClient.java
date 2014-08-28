@@ -10,14 +10,14 @@
  */
 package cn.misaka.ability.system.network.message;
 
+import io.netty.buffer.ByteBuf;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import cn.misaka.ability.api.APDataMain;
 import cn.misaka.ability.api.data.PlayerData;
 import cn.misaka.ability.system.data.PlayerDataUpdater;
 import cn.misaka.core.AcademyCraft;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import io.netty.buffer.ByteBuf;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
@@ -134,7 +134,7 @@ public class MsgSyncToClient implements IMessage {
 			public IMessage onMessage(Request message, MessageContext ctx) {
 				//System.out.println("Retrieved sync request");
 				EntityPlayerMP player = ctx.getServerHandler().playerEntity;
-				AcademyCraft.netHandler.sendTo(new MsgSyncToClient(APDataMain.loadPlayerData(player), message.flag), player);
+				AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(APDataMain.loadPlayerData(player), message.flag), player);
 				return null;
 			}
 			

@@ -10,9 +10,9 @@
  */
 package cn.misaka.ability.api.ability;
 
-import cn.liutils.api.util.Pair;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import cn.liutils.api.util.Pair;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

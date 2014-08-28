@@ -46,7 +46,7 @@ public class SkillElectricAttraction extends AbilitySkill {
 	
 	@Override
 	public boolean onSkillTick(World world, EntityPlayer player, SkillControlStat stat, PlayerControlStat mctrl) {
-		ItemStack item = player.getCurrentEquippedItem();
+		player.getCurrentEquippedItem();
 		//TODO:Judge if is electricity item, if so, do charging&consume cp
 		return true;
 	}

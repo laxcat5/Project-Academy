@@ -34,7 +34,7 @@ public class ItemTablet extends Item {
 	 */
 	
 	public ItemTablet(int subID) {
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		tabletID = subID;
 	}
 	

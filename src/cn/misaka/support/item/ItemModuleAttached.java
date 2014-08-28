@@ -10,15 +10,14 @@
  */
 package cn.misaka.support.item;
 
-import cn.misaka.core.AcademyCraft;
-import cn.misaka.core.register.APBlocks;
-import cn.misaka.support.block.tile.TileAbilityDeveloper;
-import cn.misaka.support.module.ModuleCard;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import cn.misaka.core.AcademyCraft;
+import cn.misaka.core.register.APBlocks;
+import cn.misaka.support.block.tile.TileAbilityDeveloper;
 
 /**
  * @author WeAthFolD
@@ -29,7 +28,7 @@ public class ItemModuleAttached extends Item {
 	int attachID = 0;
 
 	public ItemModuleAttached() {
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		setUnlocalizedName("ad_card");
 		setTextureName("academy:card");
 	}

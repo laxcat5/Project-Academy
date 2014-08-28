@@ -10,12 +10,13 @@
  */
 package cn.misaka.core;
 
-import org.apache.logging.log4j.Logger;
-
 import net.minecraft.command.CommandHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+
+import org.apache.logging.log4j.Logger;
+
 import cn.liutils.api.register.LIGuiHandler;
 import cn.misaka.ability.api.APCategoryStorage;
 import cn.misaka.ability.api.APControlMain;
@@ -72,32 +73,32 @@ public class AcademyCraft {
 	/**
 	 * 加载代理
 	 */
-	public static APCommonProxy proxy;
+	private static APCommonProxy proxy;
 	
 	/**
 	 * 日志
 	 */
-	public static Logger log = FMLLog.getLogger();
+	private static Logger log = FMLLog.getLogger();
 	
 	/**
 	 * 设置文件
 	 */
-	public static Configuration config;
+	private static Configuration config;
 	
 	/**
 	 * 网络发包处理实例
 	 */
-	public static SimpleNetworkWrapper netHandler = NetworkRegistry.INSTANCE.newSimpleChannel(APGeneralProps.NET_CHANNEL);
+	private static SimpleNetworkWrapper netHandler = NetworkRegistry.INSTANCE.newSimpleChannel(APGeneralProps.NET_CHANNEL);
 	
 	/**
 	 * 创造栏
 	 */
-	public static CreativeTabs cct = new APCreativeTab();
+	private static CreativeTabs cct = new APCreativeTab();
 	
 	/**
 	 * GUI管理器
 	 */
-	public static LIGuiHandler guiHandler = new LIGuiHandler();
+	private static LIGuiHandler guiHandler = new LIGuiHandler();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -161,4 +162,28 @@ public class AcademyCraft {
 		return nextNetID++;
 	}
 	
+	public static Logger getLogger()
+	{
+	    return log;
+	}
+	public static Configuration getConfig()
+	{
+	    return config;
+	}
+	public static APCommonProxy getProxy()
+	{
+	    return proxy;
+	}
+	public static SimpleNetworkWrapper getNetHandler()
+	{
+	    return netHandler;
+	}
+	public static LIGuiHandler getGUIManager()
+	{
+	    return guiHandler;
+	}
+	public static CreativeTabs getModTabs()
+	{
+	    return cct;
+	}
 }

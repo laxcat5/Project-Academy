@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class PlayerControlStat {
 	
-	public HashMap<Integer, SkillControlStat> keyStateMap = new HashMap();
+	public HashMap<Integer, SkillControlStat> keyStateMap = new HashMap<Integer, SkillControlStat>();
 
 	public PlayerControlStat() {
 	}

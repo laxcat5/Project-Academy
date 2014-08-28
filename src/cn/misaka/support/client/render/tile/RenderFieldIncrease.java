@@ -10,13 +10,14 @@
  */
 package cn.misaka.support.client.render.tile;
 
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.client.model.IModelCustom;
+
 import org.lwjgl.opengl.GL11;
 
 import cn.liutils.api.client.util.RenderUtils;
 import cn.misaka.core.proxy.APClientProps;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.client.model.IModelCustom;
 
 /**
  * @author WeAthFolD

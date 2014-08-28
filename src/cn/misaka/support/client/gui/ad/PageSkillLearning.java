@@ -10,13 +10,12 @@
  */
 package cn.misaka.support.client.gui.ad;
 
-import java.util.List;
 import java.util.Set;
+
+import net.minecraft.client.Minecraft;
 
 import org.lwjgl.opengl.GL11;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
 import cn.liutils.api.client.gui.LIGuiPage;
 import cn.liutils.api.client.gui.part.LIGuiButton;
 import cn.liutils.api.client.gui.part.LIGuiPart;

@@ -10,11 +10,6 @@
  */
 package cn.misaka.support.client.render.entity;
 
-import org.lwjgl.opengl.GL11;
-
-import cn.liutils.api.client.util.RenderUtils;
-import cn.misaka.core.proxy.APClientProps;
-import cn.misaka.support.entity.fx.EntityArcFX;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
@@ -22,8 +17,11 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
-import net.minecraftforge.client.model.AdvancedModelLoader;
-import net.minecraftforge.client.model.IModelCustom;
+
+import org.lwjgl.opengl.GL11;
+
+import cn.liutils.api.client.util.RenderUtils;
+import cn.misaka.support.entity.fx.EntityArcFX;
 
 /**
  * 光束都用这个做统一渲染吧~~

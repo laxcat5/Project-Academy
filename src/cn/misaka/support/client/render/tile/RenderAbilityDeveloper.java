@@ -10,9 +10,15 @@
  */
 package cn.misaka.support.client.render.tile;
 
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Vec3;
+import net.minecraftforge.client.model.IModelCustom;
+import net.minecraftforge.common.util.ForgeDirection;
+
 import org.lwjgl.opengl.GL11;
 
-import cn.liutils.api.client.model.IItemModel;
 import cn.liutils.api.client.model.ItemModelCustom;
 import cn.liutils.api.client.render.RenderModelItem;
 import cn.liutils.api.client.util.RenderUtils;
@@ -20,14 +26,6 @@ import cn.misaka.core.proxy.APClientProps;
 import cn.misaka.support.block.BlockAbilityDeveloper;
 import cn.misaka.support.block.IADModuleAttached;
 import cn.misaka.support.block.tile.TileAbilityDeveloper;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Vec3;
-import net.minecraftforge.client.IItemRenderer.ItemRenderType;
-import net.minecraftforge.client.model.IModelCustom;
-import net.minecraftforge.common.util.ForgeDirection;
 
 /**
  * @author WeAthFolD

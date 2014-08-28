@@ -15,19 +15,16 @@ import java.util.Map;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import cn.liutils.api.util.BlockPos;
 import cn.liutils.api.util.GenericUtils;
 import cn.liutils.api.util.Motion3D;
-import cn.misaka.support.entity.fx.EntityRayAttenuate;
 
 /**
  * @author WeAthFolD
@@ -48,7 +45,7 @@ public class EntityArc extends Entity {
 		this.setPosition(player.posX, player.posY, player.posZ);
 	}
 	
-	Map<BlockPos, Integer> affectedBlocks = new HashMap();
+	Map<BlockPos, Integer> affectedBlocks = new HashMap<BlockPos, Integer>();
 	
     @SuppressWarnings("unused")
     @Override

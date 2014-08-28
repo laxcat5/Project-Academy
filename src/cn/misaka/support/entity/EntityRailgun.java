@@ -10,10 +10,10 @@
  */
 package cn.misaka.support.entity;
 
-import cn.misaka.support.entity.fx.EntityRayAttenuate;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import cn.misaka.support.entity.fx.EntityRayAttenuate;
 
 /**
  * @author WeAthFolD

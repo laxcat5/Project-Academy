@@ -10,15 +10,16 @@
  */
 package cn.misaka.ability.system.client.render;
 
-import org.lwjgl.opengl.GL11;
-
-import cn.liutils.api.client.util.RenderUtils;
-import cn.misaka.ability.system.client.model.ModelBipedAP;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
+
+import cn.liutils.api.client.util.RenderUtils;
+import cn.misaka.ability.system.client.model.ModelBipedAP;
 
 /**
  * @author WeAthFolD

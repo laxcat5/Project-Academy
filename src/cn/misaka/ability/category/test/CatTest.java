@@ -24,7 +24,7 @@ import cn.misaka.core.proxy.APClientProps;
 public class CatTest extends AbilityCategory {
 
 	
-	private static Pair<ResourceLocation, ResourceLocation> texture = new Pair(APClientProps.TEX_HUD_LOGO, APClientProps.TEX_HUD_CPBAR);
+	private static  Pair<ResourceLocation, ResourceLocation> texture = new Pair<ResourceLocation,ResourceLocation>(APClientProps.TEX_HUD_LOGO, APClientProps.TEX_HUD_CPBAR);
 
 	public CatTest(int id) {
 		super("test", id);

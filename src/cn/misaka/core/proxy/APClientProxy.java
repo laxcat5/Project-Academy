@@ -17,8 +17,6 @@ import net.minecraftforge.client.MinecraftForgeClient;
 
 import org.lwjgl.input.Keyboard;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cn.liutils.core.client.register.LIKeyProcess;
 import cn.misaka.ability.system.client.key.KeySkillActivation;
 import cn.misaka.ability.system.client.key.KeySkillControl;
@@ -42,6 +40,8 @@ import cn.misaka.support.entity.fx.EntityArcFX;
 import cn.misaka.support.entity.fx.EntityElecArcFX;
 import cn.misaka.support.entity.fx.EntityRailgunFX;
 import cn.misaka.support.entity.fx.EntitySurroundArcFX;
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 /**
  * 客户端的加载代理

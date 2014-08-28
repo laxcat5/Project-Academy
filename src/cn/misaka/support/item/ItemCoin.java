@@ -10,16 +10,16 @@
  */
 package cn.misaka.support.item;
 
-import cn.liutils.api.util.GenericUtils;
-import cn.liutils.api.util.Pair;
-import cn.misaka.ability.category.electromaster.IRailgunQTE;
-import cn.misaka.core.AcademyCraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
+import cn.liutils.api.util.GenericUtils;
+import cn.liutils.api.util.Pair;
+import cn.misaka.ability.category.electromaster.IRailgunQTE;
+import cn.misaka.core.AcademyCraft;
 
 /**
  * @author KSkun
@@ -32,7 +32,7 @@ public class ItemCoin extends Item implements IRailgunQTE {
 	public ItemCoin() {
 		setUnlocalizedName("ap_coin");
 		setTextureName("academy:coin-front");
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 	}
 	
     @Override

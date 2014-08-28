@@ -10,6 +10,12 @@
  */
 package cn.misaka.ability.system.client.hud;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
 
 import cn.liutils.api.client.util.HudUtils;
@@ -18,11 +24,6 @@ import cn.liutils.api.util.Pair;
 import cn.misaka.ability.api.APDataMain;
 import cn.misaka.ability.system.data.PlayerDataClient;
 import cn.misaka.core.proxy.APClientProps;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ResourceLocation;
 
 /**
  * AIMIndicator GUI绘制。

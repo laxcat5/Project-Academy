@@ -59,7 +59,7 @@ public final class PlayerDataClient extends PlayerData {
 		} 
 		if(++ticker == APGeneralProps.SYNC_FREQ) {
 			//System.out.println("Client sending sync request");
-			AcademyCraft.netHandler.sendToServer(new MsgSyncToClient.Request(0x03));
+			AcademyCraft.getNetHandler().sendToServer(new MsgSyncToClient.Request(0x03));
 			ticker = 0;
 		}
 	}

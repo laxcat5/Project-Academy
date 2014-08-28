@@ -12,9 +12,6 @@ package cn.misaka.support.item;
 
 import java.util.List;
 
-import cn.misaka.core.AcademyCraft;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,6 +21,9 @@ import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.ResourceLocation;
+import cn.misaka.core.AcademyCraft;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * @author KSkun
@@ -44,7 +44,7 @@ public class ItemAPRecord extends ItemRecord {
 	public ItemAPRecord(String p_i45350_1_, int subID) {
 		super(p_i45350_1_);
 		setUnlocalizedName("APRecord");
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		recID = subID;
 	}
 	

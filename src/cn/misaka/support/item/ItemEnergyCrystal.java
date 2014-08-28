@@ -1,23 +1,22 @@
 package cn.misaka.support.item;
 
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
+
 import java.util.List;
 
-import cn.misaka.core.AcademyCraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
-import net.minecraft.world.World;
+import cn.misaka.core.AcademyCraft;
+import cn.misaka.core.item.APElectItemManager;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import ic2.api.item.IElectricItemManager;
-import ic2.api.item.ISpecialElectricItem;
-import cn.misaka.core.item.APElectItemManager;
 
 /*
  * 能量水晶
@@ -31,7 +30,7 @@ public class ItemEnergyCrystal extends Item implements ISpecialElectricItem{
 
 	public ItemEnergyCrystal(){
 		setUnlocalizedName("ap_energycrystal");
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 	}
 	
 	@Override

@@ -14,6 +14,10 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import cn.liutils.api.command.LICommandBase;
 import cn.liutils.api.util.Pair;
 import cn.misaka.ability.api.APDataMain;
@@ -21,10 +25,6 @@ import cn.misaka.ability.api.data.ModifierInitialize;
 import cn.misaka.ability.api.data.PlayerData;
 import cn.misaka.ability.system.network.message.MsgSyncToClient;
 import cn.misaka.core.AcademyCraft;
-import net.minecraft.command.CommandBase;
-import net.minecraft.command.ICommandSender;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 
 /**
  * 反射大法好
@@ -101,7 +101,7 @@ public class CommandAim extends LICommandBase {
 								field.set(data, Integer.valueOf(args[2]));
 								if(dt.second)
 									data.onStateChanged();
-								AcademyCraft.netHandler.sendTo(new MsgSyncToClient(data, 0x01), player);
+								AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(data, 0x01), player);
 								sendChat(ics, "setting successful");
 							} catch (NumberFormatException e) {
 								sendChat(ics, "argument is not a number");
@@ -117,7 +117,7 @@ public class CommandAim extends LICommandBase {
 				//TODO: Invoke Ability Dev functions
 				PlayerData data = APDataMain.loadPlayerData(player);
 				new ModifierInitialize().applyModification(player, data);
-				AcademyCraft.netHandler.sendTo(new MsgSyncToClient(data, 0x01), player);
+				AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(data, 0x01), player);
 				
 			} else if(args[0].equals("view")) {
 				PlayerData data = APDataMain.loadPlayerData(player);
@@ -131,7 +131,7 @@ public class CommandAim extends LICommandBase {
 			} else if(args[0].equals("ref")) {
 				PlayerData data = APDataMain.loadPlayerData(player);
 				data.currentCP = data.maxCP;
-				AcademyCraft.netHandler.sendTo(new MsgSyncToClient(data, 0x01), player);
+				AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(data, 0x01), player);
 			} else {
 				
 			}

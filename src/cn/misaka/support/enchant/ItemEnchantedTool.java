@@ -2,9 +2,6 @@ package cn.misaka.support.enchant;
 
 import java.util.Random;
 
-import cn.liutils.api.util.Motion3D;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,6 +15,9 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import cn.liutils.api.util.Motion3D;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemEnchantedTool extends ItemTool {
 	
@@ -39,7 +39,8 @@ public class ItemEnchantedTool extends ItemTool {
 	/**
 	 * 攻击加强&耐久加强
 	 */
-	@Override
+	@SuppressWarnings("unchecked")
+    @Override
     public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase attackedEntity, 
     		EntityLivingBase player2) {
 		if(!(player2 instanceof EntityPlayer)) return false;

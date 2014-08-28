@@ -10,8 +10,8 @@
  */
 package cn.misaka.ability.system.data;
 
-import cn.misaka.ability.api.data.PlayerData;
 import net.minecraft.entity.player.EntityPlayer;
+import cn.misaka.ability.api.data.PlayerData;
 
 /**
  * 服务端玩家数据。

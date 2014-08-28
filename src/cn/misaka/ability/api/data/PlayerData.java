@@ -10,14 +10,13 @@
  */
 package cn.misaka.ability.api.data;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.server.MinecraftServer;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.server.MinecraftServer;
 import cn.misaka.ability.api.APCategoryStorage;
 import cn.misaka.ability.api.ability.AbilityCategory;
 import cn.misaka.ability.api.ability.AbilityLevel;
@@ -27,7 +26,7 @@ import cn.misaka.ability.system.data.PlayerDataUpdater;
 import cn.misaka.ability.system.network.message.MsgSyncToClient;
 import cn.misaka.core.AcademyCraft;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
 
 /**
  * 单个玩家的能力信息。（基类）
@@ -111,7 +110,7 @@ public abstract class PlayerData {
 			skillOpen[i] = alevel.isSkillDefaultActivated(i);
 		}
 		if(!thePlayer.worldObj.isRemote) {
-			AcademyCraft.netHandler.sendTo(new MsgSyncToClient(this, 0x02), (EntityPlayerMP) thePlayer);
+			AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(this, 0x02), (EntityPlayerMP) thePlayer);
 		}
 	}
 	
@@ -218,7 +217,7 @@ public abstract class PlayerData {
 			skr = true;
 		}
 		if(!thePlayer.worldObj.isRemote)
-			AcademyCraft.netHandler.sendTo(new MsgSyncToClient(this, skr ? 0x03 : 0x01), (EntityPlayerMP) thePlayer);
+			AcademyCraft.getNetHandler().sendTo(new MsgSyncToClient(this, skr ? 0x03 : 0x01), (EntityPlayerMP) thePlayer);
 	}
 	
 	//-----------------STATIC METHODS(LOAD AND SAVE)----------------------

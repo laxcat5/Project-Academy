@@ -10,8 +10,8 @@
  */
 package cn.misaka.ability.category.electromaster;
 
-import cn.liutils.api.util.Pair;
 import net.minecraft.item.ItemStack;
+import cn.liutils.api.util.Pair;
 
 /**
  * 可以被超电磁炮用qte的方式射出的物品，需要实现这个接口。

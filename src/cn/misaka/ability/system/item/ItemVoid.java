@@ -10,12 +10,12 @@
  */
 package cn.misaka.ability.system.item;
 
-import cn.liutils.core.LIUtilsMod;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import cn.liutils.core.LIUtilsMod;
 
 /**
  * @author WeAthFolD

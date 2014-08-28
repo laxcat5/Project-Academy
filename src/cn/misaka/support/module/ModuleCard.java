@@ -14,13 +14,12 @@ import net.minecraft.item.ItemStack;
 
 import org.lwjgl.opengl.GL11;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import cn.liutils.api.client.util.RenderUtils;
 import cn.misaka.core.proxy.APClientProps;
 import cn.misaka.core.register.APItems;
 import cn.misaka.support.block.IADModuleAttached;
-import cn.misaka.support.item.ItemModuleAttached;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * @author WeAthFolD

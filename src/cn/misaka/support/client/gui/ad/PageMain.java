@@ -12,9 +12,6 @@ package cn.misaka.support.client.gui.ad;
 
 import java.util.Set;
 
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.model.ModelBiped;
@@ -24,6 +21,10 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
+
 import cn.liutils.api.client.gui.LIGuiPage;
 import cn.liutils.api.client.gui.part.LIGuiButton;
 import cn.liutils.api.client.gui.part.LIGuiPart;
@@ -53,7 +54,8 @@ public class PageMain extends LIGuiPage {
 		data = APDataMain.loadPlayerData(player);
 	}
 
-	@Override
+	@SuppressWarnings("static-access")
+    @Override
 	public void drawPage() {
 		PlayerData data = APDataMain.loadPlayerData(Minecraft.getMinecraft().thePlayer);
 

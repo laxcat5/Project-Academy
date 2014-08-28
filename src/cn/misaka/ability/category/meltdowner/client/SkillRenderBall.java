@@ -12,7 +12,6 @@ package cn.misaka.ability.category.meltdowner.client;
 
 import net.minecraft.entity.player.EntityPlayer;
 import cn.misaka.ability.api.client.render.SkillRender;
-import cn.misaka.ability.api.client.render.SkillRender.SkillRenderType;
 import cn.misaka.ability.api.control.SkillControlStat;
 import cn.misaka.ability.api.data.PlayerData;
 

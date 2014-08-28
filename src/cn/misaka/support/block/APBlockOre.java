@@ -2,12 +2,10 @@ package cn.misaka.support.block;
 
 import java.util.Random;
 
-import cn.misaka.core.AcademyCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import cn.misaka.core.register.APBlocks;
-import cn.misaka.core.register.APItems;
+import cn.misaka.core.AcademyCraft;
 
 
 /*
@@ -18,7 +16,7 @@ public class APBlockOre extends Block{
 	String BName;
 	public APBlockOre(String Blockname,int HarvestLevel){
 		super(Material.rock);
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		this.setHarvestLevel("pickaxe", HarvestLevel);
 		setHardness(4.0F);
 		setBlockName(Blockname);

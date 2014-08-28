@@ -10,6 +10,12 @@
  */
 package cn.misaka.ability.system.event;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import cn.liutils.api.util.Pair;
 import cn.misaka.ability.api.APControlMain;
 import cn.misaka.ability.api.APDataMain;
@@ -22,12 +28,6 @@ import cn.misaka.support.client.gui.GUIRailgun;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.event.world.WorldEvent;
 
 /**
  * @author WeAthFolD
@@ -71,7 +71,7 @@ public class APSEventListener {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onWorldSave(WorldEvent.Save event) {
-		APControlMain.saveToConfig(AcademyCraft.config);
+		APControlMain.saveToConfig(AcademyCraft.getConfig());
 		APDataMain.savePlayerData(false);
 	}
 

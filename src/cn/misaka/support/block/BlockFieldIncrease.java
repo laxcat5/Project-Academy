@@ -10,23 +10,21 @@
  */
 package cn.misaka.support.block;
 
-import cn.liutils.core.proxy.LIClientProps;
-import cn.misaka.core.AcademyCraft;
-import cn.misaka.support.block.tile.TileFieldIncrease;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import cn.liutils.core.proxy.LIClientProps;
+import cn.misaka.core.AcademyCraft;
+import cn.misaka.support.block.tile.TileFieldIncrease;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * @author WeAthFolD
@@ -41,7 +39,7 @@ public class BlockFieldIncrease extends Block implements ITileEntityProvider {
 		super(Material.iron);
 		this.setHardness(4.0F);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setCreativeTab(AcademyCraft.cct);
+		this.setCreativeTab(AcademyCraft.getModTabs());
 		this.setLightLevel(0.5F);
 		setBlockName("fieldincr");
 		setBlockTextureName("academy:machine");

@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.liutils.api.util.GenericUtils;
-import cn.misaka.core.register.APItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -15,6 +13,8 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
+import cn.liutils.api.util.GenericUtils;
+import cn.misaka.core.register.APItems;
 
 public class APEnchantment {
 	
@@ -22,13 +22,13 @@ public class APEnchantment {
 	 * 玩家的当前附魔数据表，分为client和server两边。
 	 */
 	private static Map<EntityPlayer, PlayerEnchantStatus>
-		statMap_client = new HashMap(),
-		statMap_server = new HashMap();
+		statMap_client = new HashMap<EntityPlayer,PlayerEnchantStatus>(),
+		statMap_server = new HashMap<EntityPlayer,PlayerEnchantStatus>();
 	
 	/**
 	 * 这里存放了所有Enchant实例，任何新的type都要在这里进行注册
 	 */
-	protected static List<APEnchantType> typeList = new ArrayList();
+	protected static List<APEnchantType> typeList = new ArrayList<APEnchantType>();
 	
 	/**
 	 * 用于替换玩家使用的武器等

@@ -1,8 +1,8 @@
 package cn.misaka.support.enchant;
 
+import cn.misaka.support.client.render.APEnchantRender;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import cn.misaka.support.client.render.APEnchantRender;
 
 public abstract class APEnchantType {
 	

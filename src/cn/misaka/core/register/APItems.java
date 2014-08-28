@@ -10,19 +10,19 @@
  */
 package cn.misaka.core.register;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cn.misaka.ability.system.item.*;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.oredict.OreDictionary;
+import cn.misaka.ability.system.item.ItemVoid;
 import cn.misaka.core.AcademyCraft;
 import cn.misaka.support.item.ItemAPRecord;
 import cn.misaka.support.item.ItemCapsule;
 import cn.misaka.support.item.ItemCoin;
+import cn.misaka.support.item.ItemEnergyCrystal;
 import cn.misaka.support.item.ItemModuleAttached;
 import cn.misaka.support.item.ItemNeedle;
 import cn.misaka.support.item.ItemTablet;
-import cn.misaka.support.item.ItemEnergyCrystal;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
  * @author WeAthFolD
@@ -75,10 +75,10 @@ public class APItems {
 		EnergyCrystal = new ItemEnergyCrystal();
 		adEnergyCard = new ItemModuleAttached();
 		//金属锭
-		AluminumIngot = new Item().setUnlocalizedName("ap_aluminumingot").setCreativeTab(AcademyCraft.cct).setTextureName("academy:aluminumingot");
-		CopperIngot = new Item().setUnlocalizedName("ap_copperingot").setCreativeTab(AcademyCraft.cct).setTextureName("academy:copperingot");
-		SteelIngot = new Item().setUnlocalizedName("ap_steelingot").setCreativeTab(AcademyCraft.cct).setTextureName("academy:steelingot");
-		TinIngot = new Item().setUnlocalizedName("ap_tiningot").setCreativeTab(AcademyCraft.cct).setTextureName("academy:tiningot");
+		AluminumIngot = new Item().setUnlocalizedName("ap_aluminumingot").setCreativeTab(AcademyCraft.getModTabs()).setTextureName("academy:aluminumingot");
+		CopperIngot = new Item().setUnlocalizedName("ap_copperingot").setCreativeTab(AcademyCraft.getModTabs()).setTextureName("academy:copperingot");
+		SteelIngot = new Item().setUnlocalizedName("ap_steelingot").setCreativeTab(AcademyCraft.getModTabs()).setTextureName("academy:steelingot");
+		TinIngot = new Item().setUnlocalizedName("ap_tiningot").setCreativeTab(AcademyCraft.getModTabs()).setTextureName("academy:tiningot");
 		
 		
 		GameRegistry.registerItem(abilityVoid, "ability_void");

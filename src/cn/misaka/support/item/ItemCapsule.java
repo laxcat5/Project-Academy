@@ -10,11 +10,11 @@
  */
 package cn.misaka.support.item;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import cn.misaka.core.AcademyCraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
+import cn.misaka.core.AcademyCraft;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * @author KSkun
@@ -34,7 +34,7 @@ public class ItemCapsule extends Item {
 	 */
 	
 	public ItemCapsule(int subID) {
-		setCreativeTab(AcademyCraft.cct);
+		setCreativeTab(AcademyCraft.getModTabs());
 		capsuleID = subID;
 	}
 	
